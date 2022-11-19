@@ -12,6 +12,8 @@
 
   <link rel="stylesheet" href="styles.css">
 
+  <script src="https://kit.fontawesome.com/adc6e39057.js" crossorigin="anonymous"></script>
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
 </head>
@@ -27,32 +29,48 @@
     <div class="form">
       <a href="#" class="offer"><b>Try it free 7 days</b> then $20/mo. thereafter</a>
       <form action="">
-        <input 
-          type="text" 
-          name="first-name" 
-          id="first-name"
-          placeholder="First Name"
-        >
-        <input 
-          type="text" 
-          name="last-name" 
-          id="last-name"
-          placeholder="Last Name"
-        >
-        <input 
-          type="text" 
-          name="email" 
-          id="form-name"
-          placeholder="Email Address"
-        >
-        <input 
-          type="text" 
-          name="Name" 
-          id="form-name"
-          placeholder="Password"
-        >
-        <button>Claim your free trial </button>
-        <p>By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            name="first-name" 
+            id="first-name"
+            placeholder="First Name"
+          >
+          <i class="fa fa-exclamation-circle exclamation"></i>
+          <div class="alert"><p>First Name cannot be empty</p></div>
+        </div>
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            name="last-name" 
+            id="last-name"
+            placeholder="Last Name"
+          >
+          <i class="fa fa-exclamation-circle exclamation"></i>
+          <div class="alert"><p>Last Name cannot be empty</p></div>
+        </div>
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            name="email" 
+            id="email"
+            placeholder="Email Address"
+          >
+          <i class="fa fa-exclamation-circle exclamation"></i>
+          <div class="alert"><p id="email-error-message"></p></div>
+        </div>
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            name="password" 
+            id="password"
+            placeholder="Password"
+          >
+          <i class="fa fa-exclamation-circle exclamation"></i>
+          <div class="alert"><p>Password cannot be empty</p></div>
+        </div>
+        <button id="form-button">Claim your free trial </button>
+        <p class="terms">By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
       </form>
     </div>
   </main>
@@ -63,5 +81,7 @@
       Coded by <a href="#">Carlos Castillo</a>.
     </p>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
